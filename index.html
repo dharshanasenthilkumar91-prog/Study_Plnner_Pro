@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Study Planner Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+        <h2>Study Planner</h2>
+        <ul>
+            <li onclick="showPage('home')">Home</li>
+            <li onclick="showPage('tasks')">Tasks</li>
+            <li onclick="showPage('focus')">Focus</li>
+            <li onclick="showPage('progress')">Progress</li>
+            <li onclick="showPage('about')">About</li>
+        </ul>
+    </nav>
+
+    <!-- HOME -->
+    <div id="home" class="page active">
+        <div class="box">
+            <h1 class="typing">Welcome to Study Planner 🚀</h1>
+            <p>Plan your work. Stay focused. Achieve your goals.</p>
+
+            <h3>Why use this?</h3>
+            <ul>
+                <li>✔ Organize tasks efficiently</li>
+                <li>✔ Track your progress visually</li>
+                <li>✔ Stay focused with Pomodoro timer</li>
+            </ul>
+
+            <p class="quote">"Small steps daily lead to big success."</p>
+        </div>
+    </div>
+
+    <!-- TASKS -->
+    <div id="tasks" class="page">
+        <div class="box">
+            <h2>Add Task</h2>
+            <input type="text" id="taskInput" placeholder="Enter task">
+            <input type="date" id="taskDate">
+            <button onclick="addTask()">Add Task</button>
+            <ul id="taskList"></ul>
+        </div>
+    </div>
+
+    <!-- FOCUS MODE -->
+    <div id="focus" class="page">
+        <div class="box">
+            <h2>Focus Mode ⏳</h2>
+
+            <input type="number" id="minutesInput" placeholder="Enter minutes (e.g. 25)">
+
+            <div id="timer">00:00</div>
+
+            <div class="focus-buttons">
+                <button onclick="startTimer()">▶ Start</button>
+                <button onclick="pauseTimer()">⏸ Pause</button>
+                <button onclick="resetTimer()">🔄 Reset</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- PROGRESS -->
+    <div id="progress" class="page">
+        <div class="box">
+            <h2>Your Progress</h2>
+
+            <!-- ✅ ADDED ID FOR PROGRESS FIX -->
+            <div class="circle" id="progressCircle">
+                <div id="circleText">0%</div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ABOUT -->
+    <div id="about" class="page">
+        <div class="box">
+            <h2>About This Project</h2>
+
+            <p>This Study Planner is designed to help students improve productivity and time management.</p>
+
+            <h3>Features</h3>
+            <ul>
+                <li>✔ Task management system</li>
+                <li>✔ Progress tracking</li>
+                <li>✔ Focus mode (Pomodoro)</li>
+                <li>✔ Interactive UI with animations</li>
+            </ul>
+
+            <h3>Developer</h3>
+            <p><b>Dharshana Senthilkumar</b></p>
+
+            <p>This project demonstrates practical web development skills and user experience design.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
